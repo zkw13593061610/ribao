@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            list-style: none;
+        }
+        .login{
+            width: 100%;
+            height: 100%;
+            /*background: #1ab394;*/
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: url("../static/img/bg.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        form{
+            width: 230px;
+            height: 240px;
+            border: 1px solid #000;
+            position: absolute;
+            right: 12%;
+            top: 44%;
+            background: rgba(255,255,255,0.5);
+            border-radius: 10px;
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            /*justify-content: flex-start;*/
+            /*align-items: center;*/
+            font-size: 16px;
+            overflow: hidden;
+            padding-top: 20px;
+        }
+        form h3{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        form li{
+            width: 200px;
+            height: 50px;
+            padding-left: 30px;
+            overflow: hidden;
+            line-height: 50px;
+        }
+        .username{
+            width: 100px;
+            height: 25px;
+            border: 0;
+            /*margin: 15px auto;*/
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+        .userpass{
+            width: 100px;
+            height: 25px;
+            border: 0;
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+        .code{
+            width: 70px;
+            height: 25px;
+            border: 0;
+        }
+        .submit{
+            width: 50px;
+            height: 30px;
+            margin-right: 25px;
+            border: 0;
+        }
+        .reset{
+            width: 50px;
+            height: 30px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <form action="/delu" method="post">
+            <h3>登录日报系统</h3>
+            <li>
+                账 户:<input type="text" name="tel" class="username">
+            </li>
+            <li>
+                密 码:<input type="password" name="userpass" class="userpass">
+            </li>
+            <li style="position: relative">
+                <img src="http://127.0.0.1:5000/yanzheng" onclick="this.src='http://127.0.0.1:5000/yanzheng?'+Math.random()" alt="" style="height: 35px;width: 80px;position: absolute;left: 10px;top: 15px">
+                <div class="yan" style=";width:130px;height:35px;line-height:35px;position: absolute;left: 100px;top: 15px">
+                    验证码:<input type="text" name="code" class="code">
+                </div>
+
+            </li>
+            <li style="margin-top: 15px;width: 230px;padding-left: 0;display: flex;justify-content: center">
+                <input type="submit" value="登录" class="submit">
+                <input type="reset" value="重置" class="reset">
+            </li>
+        </form>
+    </div>
+</body>
+</html>
